@@ -8,8 +8,11 @@ $(document).on("pagecreate","#pageone",function(){
 function submitText() {
 	var text = $('#textinput').val();
 	alert(text);
+    storeValue ("date", text)
 }
 
 function storeValue(key, value) {
 	//add some code to store the key-value pair in persistant storage 
+    window.localStorage.setItem(key,value);
+    
 }
